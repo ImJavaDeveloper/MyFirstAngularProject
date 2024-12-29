@@ -1,0 +1,76 @@
+<div class="news-container">
+    <mat-expansion-panel class="mep">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Add News !!! </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <form class="news-form" [formGroup]="newsForm" (ngSubmit)="addNews()">
+        <mat-form-field>
+          <mat-label>Enter News Title</mat-label>
+          <input
+            matInput
+            formControlName="newsTitle"
+            id="newsTitle"
+            class="form-control"
+            matInput
+          />
+          <mat-error *ngIf="newsForm.get('newsTitle')?.hasError('required')"
+            >News Title is required field</mat-error
+          >
+          <mat-error *ngIf="newsForm.get('newsTitle')?.hasError('minlength')">
+            News Title Field must be of 3 characters !!!!
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Enter News Details</mat-label>
+          <textarea
+            matInput
+            formControlName="newsDesc"
+            name="newsDesc"
+          ></textarea>
+  
+          @if (newsForm.get('newsDesc')?.hasError('required')) {
+          <mat-error>News Details is required field</mat-error>
+          } @if (newsForm.get('newsDesc')?.hasError('minlength')) {
+          <mat-error>News Details min length must be of 6 characters</mat-error>
+          }
+        </mat-form-field>
+  
+        <button class="btn btn-primary">Save</button>
+      </form>
+    </mat-expansion-panel>
+  </div>
+  
+  <div class="newscard-container">
+    <mat-list *ngFor="let newsdata of newsList">
+      <mat-list-item class="news-card">
+        <mat-card class="news-card1" appearance="outlined">
+          <mat-card-content>{{ newsdata.newsTitle }}</mat-card-content>
+  
+          <mat-card-content> {{ newsdata.newsDesc }} </mat-card-content>
+        </mat-card>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  
+  <!-- <p>{{ msg }}</p> -->
+  
+  <!-- <button style="{{ btnStyle }}" >Submit</button> -->
+  
+  <!-- <button
+    class="btn btn-primary"
+    [disabled]="isDisabled"
+    (click)="validateData()"
+  >
+    {{ btnText }}
+  </button>
+  
+  <div> -->
+  <!-- Manual Implementation of Two Way Data Binding using Property and Event Binding -->
+  <!-- <input type="text" [value]="userName" (input)="updateUserName($event)" /> -->
+  
+  <!-- <input type="text" [(ngModel)]="userName" />
+    <p>Hello {{ userName }}</p>
+  </div> -->
+  

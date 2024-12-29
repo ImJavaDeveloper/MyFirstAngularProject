@@ -1,0 +1,37 @@
+.news-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-left: 25%;
+    background-color: cadetblue;
+    width: 50vw;
+  }
+
+  .news-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 5%;
+  }
+
+  .mep {
+    width: 100vw;
+  }
+
+  .newscard-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+  
+  .news-card {
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }

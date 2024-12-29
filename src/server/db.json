@@ -1,0 +1,24 @@
+{
+    "news": [
+      {
+        "id": "1",
+        "newsTitle": "Java",
+        "newsDesc": "New java version Launched"
+      },
+      {
+        "id": "2",
+        "newsTitle": "DotNet",
+        "newsDesc": "New DotNet version Launched"
+      },
+      {
+        "id": "d4a0",
+        "newsTitle": "news1",
+        "newsDesc": "news1 desc"
+      },
+      {
+        "id": "4194",
+        "newsTitle": "news1",
+        "newsDesc": "news1 desc"
+      }
+    ]
+  }
